@@ -12,7 +12,7 @@ dim_zones as (
 )
 
 select
-    fhv_data.trip_id,
+    fhv_data.tripid,
     fhv_data.dispatching_base_num,
     fhv_data.pickup_locationid,
     pickup_zone.borough as pickup_borough,
