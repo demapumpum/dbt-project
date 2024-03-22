@@ -10,8 +10,37 @@ sources:
       - name: yellow_tripdata
       - name: fhv_tripdata
       - name: fhv_tripdata_1
+      - name: external_table_hourly_flights
+      - name: external_table_daily_flights
+      - name: external_table_airports_lookup
+      - name: external_table_airlines_lookup
 
 models:
+    - name: stg_hourly_flights
+      description: >
+        Hourly flights recorded within bounded area
+      columns:
+          - name: flight_id
+            description: Unique flight id
+          - name: flight_number
+            description: Flight number associated with flight_id
+          - name: latitude
+            description: Current latitude at time of data extraction
+          - name: longitude
+            description: Current longitude at time of data extraction
+          - name: aircraft_code
+            description: Aircraft code
+          - name: datetime
+            description: Timestamp of the flight position
+          - name: origin_airport_iata
+            description: Origin airport IATA code
+          - name: destination_airport_iata
+            description: Destination airport IATA code
+          - name: airline_iata
+            description: Airline IATA code
+          - name: airline_icao
+            description: Airline ICAO code
+    
     - name: stg_green_tripdata
       description: >
         Trip made by green taxis, also known as boro taxis and street-hail liveries.

@@ -1,6 +1,14 @@
 version: 2
 
 models:
+  - name: airports
+    description: >
+      List of Airports and their corresponding IATA code
+    
+  - name: airlines
+    description: >
+      List of Airlines and their corresponding ICAO code
+
   - name: dim_zones
     description: >
       List of unique zones identified by locationid. 
